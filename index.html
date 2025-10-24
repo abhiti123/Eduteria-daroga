@@ -1,358 +1,2211 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indian Map 2024 by Khan Sir</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            background: #f5f7fa;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .header {
-            background: #1c1c1c;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .subheading {
-            font-size: 16px;
-            margin-top: 10px;
-            color: #ccc;
-            font-weight: normal;
-        }
-
-        .subheading a {
-            color: #ffeb3b;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        #video-player {
-            margin: 20px auto;
-            width: 90%;
-            max-width: 800px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            background: #1c1c1c;
-            padding: 10px;
-        }
-
-        #url-input-container {
-            display: none;
-            margin: 20px auto;
-            width: 90%;
-            max-width: 600px;
-            text-align: center;
-        }
-
-        #url-input-container input {
-            width: 70%;
-            padding: 10px;
-            border: 2px solid #007bff;
-            border-radius: 5px;
-            font-size: 16px;
-            margin-right: 10px;
-        }
-
-        #url-input-container button {
-            width: 25%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            background: #007bff;
-            color: white;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        #url-input-container button:hover {
-            background: #0056b3;
-        }
-
-        .search-bar {
-            margin: 20px auto;
-            width: 90%;
-            max-width: 600px;
-            text-align: center;
-        }
-
-        .search-bar input {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #007bff;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .no-results {
-            color: red;
-            font-weight: bold;
-            margin-top: 20px;
-            text-align: center;
-            display: none;
-        }
-
-        .container {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px auto;
-            width: 90%;
-            max-width: 800px;
-        }
-
-        .tab {
-            flex: 1;
-            padding: 15px;
-            background: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border-radius: 10px;
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-            margin: 0 5px;
-        }
-
-        .tab:hover {
-            background: #007bff;
-            color: white;
-            transform: translateY(-5px);
-        }
-
-        .content {
-            display: none;
-            margin: 20px auto;
-            width: 90%;
-            max-width: 800px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .content h2 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: #007bff;
-        }
-
-        .video-list, .pdf-list, .other-list {
-            text-align: left;
-        }
-
-        .video-list a, .pdf-list a, .other-list a {
-            display: block;
-            padding: 10px;
-            background: #f5f7fa;
-            margin: 5px 0;
-            border-radius: 5px;
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .video-list a:hover, .pdf-list a:hover, .other-list a:hover {
-            background: #007bff;
-            color: white;
-            transform: translateX(10px);
-        }
-
-        .footer {
-            margin-top: 30px;
-            font-size: 16px;
-            font-weight: bold;
-            padding: 15px;
-            background: #1c1c1c;
-            color: white;
-            text-align: center;
-            border-radius: 10px;
-        }
-
-        .footer a {
-            color: #ffeb3b;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>VARDI BATCH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    :root {
+      --bg: linear-gradient(135deg, #e3f2fd, #f0f0f0);
+      --card: #ffffff;
+      --text: #0b5394;
+    }
+    body.dark {
+      --bg: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+      --card: #1e1e1e;
+      --text: #e3f2fd;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      padding: 15px 25px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    header h1 { margin: 0; font-size: 22px; }
+    .btns button {
+      padding: 6px 12px; margin-left: 10px;
+      border: none; border-radius: 6px;
+      cursor: pointer; background: white; color: #0b5394; font-weight: bold;
+    }
+    .container { display: flex; flex-direction: row; flex: 1; overflow: hidden; }
+    .sidebar {
+      width: 120px; background: rgba(11, 83, 148, 0.85);
+      color: white; padding: 10px;
+      backdrop-filter: blur(4px); box-shadow: inset -1px 0 3px rgba(0,0,0,0.2);
+    }
+    .subject {
+      background: #1976d2; margin: 6px 0;
+      padding: 6px; border-radius: 6px;
+      cursor: pointer; font-size: 12px; text-align: center;
+    }
+    .subject:hover { background: #2196f3; }
+    .content { flex: 1; padding: 20px; overflow-y: auto; }
+    .topic h3 { margin: 10px 0 5px; }
+    .link {
+      display: block; background: var(--card);
+      padding: 10px; margin: 10px 0; border-radius: 10px;
+      text-decoration: none; color: var(--text);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
+    .search {
+      width: 100%; padding: 8px; margin-bottom: 10px;
+      border-radius: 6px; border: 1px solid #ccc;
+    }
+    footer {
+      padding: 10px; text-align: center;
+      background: #0b5394; color: white; font-size: 14px;
+    }
+    footer a { color: #fff; text-decoration: underline; }
+  </style>
 </head>
 <body>
-    <div class="header">
-        Indian Map 2024 by Khan Sir
-        <div class="subheading">📥 <b>Extracted By : [ 𝄟⃝🐬ABHI𝄟⃝🐬](https://t.me/dristi_bosc)⁬</b></div>
+  <header>
+    <h1>VARDI BATCH</h1>
+    <div class="btns">
+      <button onclick="document.body.classList.toggle('dark')">🌓</button>
     </div>
-
-    <div id="video-player">
-        <video id="engineer-babu-player" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360">
-            <p class="vjs-no-js">
-                To view this video please enable JavaScript, and consider upgrading to a web browser that
-                <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-        </video>
+  </header>
+  <div class="container">
+    <div class="sidebar" id="sidebar"></div>
+    <div class="content">
+      <input type="text" id="search" class="search" placeholder="🔍 Search...">
+      <div id="contentArea"></div>
     </div>
+  </div>
+  <footer>📢 Powered by <a href="https://t.me/dristi_bpsc" target="_blank">@dristi_bpsc</a></footer>
+  <script>
+    const data = {
+  "ABHI🥰click here to all videos 😳💥": {
+    "PYQ Analysis  || Edu Teria Classes ||:": [
+      {
+        "title": "(Current affairs) Bihar Daroga Current Affairs Strategy by Ravi Verma Sir",
+        "link": "https://youtu.be/HkujzV8JBjY"
+      }
+    ],
+    "General": [
+      {
+        "title": "(Current affairs) Current Affairs Day 01:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166/admin_v1/sample/65245080_Current%20Affairs%20Bihar%20Daroga%20%28Current%20Affairs%29%20Class_01_27_Jan_compressed.pdf"
+      },
+      {
+        "title": "(Current affairs) January Current Affairs 2025 - Class 02:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/661754275857878100.pdf"
+      },
+      {
+        "title": "(Current affairs) Weekly Current Affairs  01 Feb. To 09 Feb. 2025 by Ravi:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/474196507235511400.pdf"
+      },
+      {
+        "title": "(Current affairs) weekly Current Affairs(10Feb_16Feb):",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/221611720808920930.pdf"
+      },
+      {
+        "title": "(Current affairs) Weekly Current Affairs 17 to 23 Feburary 2025 Class 05:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/92727177489707700.pdf"
+      },
+      {
+        "title": "(Current affairs) Weekly Current Affairs Class 06:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/841256480919171600.pdf"
+      },
+      {
+        "title": "(Current affairs) Current Affairs Class 7:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/348130339257394900.pdf"
+      },
+      {
+        "title": "(Current affairs) Current Affairs Class 8:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/37451929374468930.pdf"
+      },
+      {
+        "title": "(Current affairs) Current Affairs Class 09:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/313234412984162370.pdf"
+      },
+      {
+        "title": "(Current affairs) Current Affairs Class 10:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/55114496764977900.pdf"
+      },
+      {
+        "title": "(Current affairs) Current Affairs Class 11:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/847140989437681800.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Day 01:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166/admin_v1/sample/58904710_Maths%20Day%2001_compressed.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Day 02:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166/admin_v1/sample/22436340_compound%20Interest%202-min.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Day 03:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/416273766243655800.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Day 04:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/45480991174543624.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Day 06:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/50096958237672060.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Day 07:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/247083752639459330.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Day 08:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/563080039607377600.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Day 09:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/553356458837881150.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) ? Bihar Daroga 2025 _ FREE VARDI Batch ? _ Maths Profit and Loss - 02 _ BY Amit Varma Sir! ?:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/file_library/videos/vod_non_drm_ios/4300044/1739007524_3513608636141907/447437816191296960.m3u8"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Day 10:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/127137387514662930.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Day 11:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/23665388049613400.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Day 12:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/874575336200549900.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Day 13:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/443283564470778700.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Day 14:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/211423533636235400.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Day 15:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/211423533636235400.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Day 16:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/745055773303294000.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Day 17:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/201548568129918750.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Class 18:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/15485778073906432.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Class 19:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/474147090615738050.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Class 20:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/800135639448430500.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Class 21:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/217993913078004670.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Class 22:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/705757710417864400.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Class 23:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/771270336592248300.pdf"
+      },
+      {
+        "title": "(Maths & Reasoning) Maths Class 24:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/430921906793612900.pdf"
+      },
+      {
+        "title": "(Polity) Polity Day 01:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166/admin_v1/sample/38451130_Polity%20Day%2001_compressed.pdf"
+      },
+      {
+        "title": "(Polity) Polity Day 02:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166/admin_v1/sample/65373180_28-Jan-2025_compressed.pdf"
+      },
+      {
+        "title": "(Polity) Polity Day 03:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/112664185022575540.pdf"
+      },
+      {
+        "title": "(Polity) Day 05 - Bihar Daroga 2025: FREE Polity & Schedules Class - Join Vardi Batch with Upasana Ma’am:",
+        "link": "https://youtu.be/uIkVRulLi2o"
+      },
+      {
+        "title": "(Polity) Polity Day 04:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/309270454254324100.pdf"
+      },
+      {
+        "title": "(Polity) Polity Day 05:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/748615107838447600.pdf"
+      },
+      {
+        "title": "(Polity) Polity Day 06:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/599237372599433300.pdf"
+      },
+      {
+        "title": "(Polity) Polity Day  07:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/492960387689997600.pdf"
+      },
+      {
+        "title": "(Polity) Polity Day 09:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/315965975292708030.pdf"
+      },
+      {
+        "title": "(Polity) Polity Day 10:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/328569955718648060.pdf"
+      },
+      {
+        "title": "(Polity) Class 41 - Bihar Daroga 2025/Bihar SI/Bihar Police/Bihar SSC Most Expected Questions By Upasana Ma'am Eduteria:",
+        "link": "https://youtu.be/TJWidsisoa0"
+      },
+      {
+        "title": "(Polity) Class 42 - Bihar Daroga 2025/Bihar SI/Bihar Police/Bihar SSC Most Expected Questions By Upasana Ma'am Eduteria:",
+        "link": "https://youtu.be/e0ECDdVz4Ek"
+      },
+      {
+        "title": "(Polity) Polity Day 08:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/508097913746514370.pdf"
+      },
+      {
+        "title": "(Polity) Polity Day 16:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/591809919339560200.pdf"
+      },
+      {
+        "title": "(Polity) Polity Day 17:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/361516200994506900.pdf"
+      },
+      {
+        "title": "(Polity) Polity Day 18:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/487138170785193660.pdf"
+      },
+      {
+        "title": "(Polity) Polity Day 19:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/458711221147759200.pdf"
+      },
+      {
+        "title": "(Polity) Polity Day 20:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/551248529620205500.pdf"
+      },
+      {
+        "title": "(Polity) Polity Day 21:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/25916944542686580.pdf"
+      },
+      {
+        "title": "(Polity) Polity Day 22:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/326195384101806000.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 23:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/571652761039234600.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 24:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/786854192973921700.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 25:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/721969085958443100.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 26:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/163086436486576740.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 28:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/439124751123949500.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 29:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/644173324808722800.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 30:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/68136139118395736.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 31:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/767100525279550500.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 32:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/413472993823155260.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 33:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/442716269340930000.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 34:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/372930482601551600.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 35:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/34243723619507828.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 36:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/672183101298990700.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 37:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/467767485632189100.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 38:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/832130570229296600.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 39:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/327335876402527100.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 40:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/414849364628222500.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 41:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/685166988856840300.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 42:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/221495818577434850.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 43:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/135608119138313330.pdf"
+      },
+      {
+        "title": "(Polity) Polity Class 27:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/865467029254294900.pdf"
+      },
+      {
+        "title": "(Geography) Geography Day 01:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166/admin_v1/sample/8216330_Geography%20Day%2001_compressed.pdf"
+      },
+      {
+        "title": "(Geography) Geography Day 02:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166/admin_v1/sample/62369080_gyan.second%20class-min.pdf"
+      },
+      {
+        "title": "(Geography) Geography Day 03:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/486339595726244000.pdf"
+      },
+      {
+        "title": "(Geography) Geography Day 04:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/868599006687868500.pdf"
+      },
+      {
+        "title": "(Geography) Geography Day 05:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/3914374492547034.pdf"
+      },
+      {
+        "title": "(Geography) Geography Day 06:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/453030416098284500.pdf"
+      },
+      {
+        "title": "(Geography) Geography Day 07:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/204773932331594300.pdf"
+      },
+      {
+        "title": "(Geography) Geography Day 08 - One Shot:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/92182055651678260.pdf"
+      },
+      {
+        "title": "(Geography) Geography Day 09:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/391157178300190200.pdf"
+      },
+      {
+        "title": "(Geography) Geography Day 10:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/387739923908686140.pdf"
+      },
+      {
+        "title": "(Geography) Geography Day 11:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/459680744558755300.pdf"
+      },
+      {
+        "title": "(Geography) Geography Day 13:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/663756932203333400.pdf"
+      },
+      {
+        "title": "(Geography) Geography Day 14:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/765604325994304400.pdf"
+      },
+      {
+        "title": "(Geography) Geography Day 15:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/606892824625144000.pdf"
+      },
+      {
+        "title": "(Geography) Geography Day 16:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/167535498499390600.pdf"
+      },
+      {
+        "title": "(Geography) Geography Day 17:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/860675840140204800.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 18:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/790735356991440400.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 19:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/674760970173066800.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 20:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/436905885519433540.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 21:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/141232672647266670.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 22:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/674570697174909400.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 23:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/736522044423035000.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 24:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/126073942877327800.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 25:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/5012438862617707.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 26:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/835054790955309200.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 27:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/423764133427338400.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 28:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/843841392303823900.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 29:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166/admin_v1/sample/76937330_Geography%20Class%2029.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 30:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/444952556853743800.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 31:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/70571735609575740.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 32:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/27874569157419748.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 33:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/462932323816337150.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 34:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/227804953814421630.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 35:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/347973090093093600.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 36:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/645886081104179700.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 37:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/285410714612628350.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 38:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/234716772972874400.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 39:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/307651120707148800.pdf"
+      },
+      {
+        "title": "(Geography) Geography Class 40:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/126216325457759260.pdf"
+      },
+      {
+        "title": "(History) Master History with Ritesh Sir – Prehistoric Period (Stone Age) Explained! Edu Teria Classes:",
+        "link": "https://youtu.be/M7M4kl_6ziQ"
+      },
+      {
+        "title": "(History) History Day 01:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166/admin_v1/sample/29655350_History%20Day%2001_compressed.pdf"
+      },
+      {
+        "title": "(History) History Day 02:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166/admin_v1/sample/55279950_IVC%20Part%202-min.pdf"
+      },
+      {
+        "title": "(History) History Day 03:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/828733960866657500.pdf"
+      },
+      {
+        "title": "(History) Bihar Daroga 2025: FREE History Preparation - Vedic Period Part 2 with Ritesh Sir:",
+        "link": "https://youtu.be/brnSQOfgiAs"
+      },
+      {
+        "title": "(History) History Day 04:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/200238605207283140.pdf"
+      },
+      {
+        "title": "(History) History Day 05:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/185692485427429120.pdf"
+      },
+      {
+        "title": "(History) History Day 06:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/641541111449557000.pdf"
+      },
+      {
+        "title": "(History) History Day 07:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/243563161523696930.pdf"
+      },
+      {
+        "title": "(History) History Day 08:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/363059726713923200.pdf"
+      },
+      {
+        "title": "(History) History Day 09:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/821511361947359900.pdf"
+      },
+      {
+        "title": "(History) History Day 10:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/333116156947410100.pdf"
+      },
+      {
+        "title": "(History) History Day 11:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/171290114914012960.pdf"
+      },
+      {
+        "title": "(History) History Day 12:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/526927645948034600.pdf"
+      },
+      {
+        "title": "(History) History Day 13:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/431605596910740200.pdf"
+      },
+      {
+        "title": "(History) History Class 50:",
+        "link": "https://youtube.com/live/vYckidc3dSo?feature=share"
+      },
+      {
+        "title": "(History) History Day 14:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/482215423428247700.pdf"
+      },
+      {
+        "title": "(History) History Day 15:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/279048849096616200.pdf"
+      },
+      {
+        "title": "(History) History Day 16:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/809312365869711400.pdf"
+      },
+      {
+        "title": "(History) History Day 17:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/272065014579575140.pdf"
+      },
+      {
+        "title": "(History) History Day 18:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/320010500568693000.pdf"
+      },
+      {
+        "title": "(History) History Day 19:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/232001986935049180.pdf"
+      },
+      {
+        "title": "(History) History Day 20:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/114543439248117470.pdf"
+      },
+      {
+        "title": "(History) History Class 21:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/700963091773481500.pdf"
+      },
+      {
+        "title": "(History) History Class 22:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/805892642534969200.pdf"
+      },
+      {
+        "title": "(History) History Class 23:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/820731616498142500.pdf"
+      },
+      {
+        "title": "(History) History Class 24:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/492290049523737150.pdf"
+      },
+      {
+        "title": "(History) History Class 25:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/295202635126140160.pdf"
+      },
+      {
+        "title": "(History) History Class 26:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/665762682989437000.pdf"
+      },
+      {
+        "title": "(History) History Class 27 - ONE SHOT:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/76914683179113170.pdf"
+      },
+      {
+        "title": "(History) History Class 28:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/280989054914779000.pdf"
+      },
+      {
+        "title": "(History) History Class 29:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/448886531186729700.pdf"
+      },
+      {
+        "title": "(History) History Class 30:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/232858984686260060.pdf"
+      },
+      {
+        "title": "(History) History Class 31:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/145669422563990460.pdf"
+      },
+      {
+        "title": "(History) History Class 32:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/494086601502688500.pdf"
+      },
+      {
+        "title": "(History) History Class 33:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/54889066929407496.pdf"
+      },
+      {
+        "title": "(History) History Class 34:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/800687794615974000.pdf"
+      },
+      {
+        "title": "(History) History Class 35:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/253834974611494560.pdf"
+      },
+      {
+        "title": "(History) History Class 36:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/218050849548268770.pdf"
+      },
+      {
+        "title": "(History) History Class 37:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/517271871550437500.pdf"
+      },
+      {
+        "title": "(History) History Class 38:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/263632620974889000.pdf"
+      },
+      {
+        "title": "(History) History Class 39:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/874738777022736500.pdf"
+      },
+      {
+        "title": "(History) History Class 40:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/342065898286075650.pdf"
+      },
+      {
+        "title": "(History) History Class 41:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/678984914020576400.pdf"
+      },
+      {
+        "title": "(History) History Class 42:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/126784821400597390.pdf"
+      },
+      {
+        "title": "(History) History Class 43:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/247542850123758180.pdf"
+      },
+      {
+        "title": "(History) History Class 44:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/580439802635087200.pdf"
+      },
+      {
+        "title": "(History) History Class 45:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/554753846281455740.pdf"
+      },
+      {
+        "title": "(History) History Class 46:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/182690109713366600.pdf"
+      },
+      {
+        "title": "(History) History Class 47:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/208281151525664400.pdf"
+      },
+      {
+        "title": "(History) History Class 48:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/571602611228792060.pdf"
+      },
+      {
+        "title": "(History) History Class 49:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/827758822869536300.pdf"
+      },
+      {
+        "title": "(History) Hidtory Class 51:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/424392626882863400.pdf"
+      },
+      {
+        "title": "(Science) Science Day 01:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166/admin_v1/sample/54485130_Science%20Day%2001_compressed.pdf"
+      },
+      {
+        "title": "(Science) Science Day 02:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166/admin_v1/sample/28433000_Biology%20class%2002-min.pdf"
+      },
+      {
+        "title": "(Science) Science Day 03:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/364309882731821440.pdf"
+      },
+      {
+        "title": "(Science) Science Day 04:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/895556179162100200.pdf"
+      },
+      {
+        "title": "(Science) Science Day 05:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/831350050182431100.pdf"
+      },
+      {
+        "title": "(Science) Science Day 06:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/747644831540345700.pdf"
+      },
+      {
+        "title": "(Science) Science Day 07:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/320939160752268100.pdf"
+      },
+      {
+        "title": "(Science) Science Day 09:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/705570575782601200.pdf"
+      },
+      {
+        "title": "(Science) Science Day 10 - ONE SHOT:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/405098477340418370.pdf"
+      },
+      {
+        "title": "(Science) Science Day 11:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/409817957581127550.pdf"
+      },
+      {
+        "title": "(Science) Science Day 12:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/772201179139764100.pdf"
+      },
+      {
+        "title": "(Science) Science Day 13:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/15535396276743874.pdf"
+      },
+      {
+        "title": "(Science) Science Day 14:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/535046628958310660.pdf"
+      },
+      {
+        "title": "(Science) Science Class 15:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/799043871997757800.pdf"
+      },
+      {
+        "title": "(Science) Science Class 16:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/785050892609114000.pdf"
+      },
+      {
+        "title": "(Science) Science Class 17:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/758492142564147000.pdf"
+      },
+      {
+        "title": "(Science) Science Class 18:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/834206155658919600.pdf"
+      },
+      {
+        "title": "(Science) Science Class 19:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/829437263200890500.pdf"
+      },
+      {
+        "title": "(Science) Science Class 20:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/591083715714992500.pdf"
+      },
+      {
+        "title": "(Science) Science Class 21:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/785364318603318900.pdf"
+      },
+      {
+        "title": "(Science) Science Class 22:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/262898935499322270.pdf"
+      },
+      {
+        "title": "(Science) Science Class 23:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/71762710948489784.pdf"
+      },
+      {
+        "title": "(Science) Science Class 24:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/201288155440018000.pdf"
+      },
+      {
+        "title": "(Science) Science Class 25:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/89419639942058020.pdf"
+      },
+      {
+        "title": "(Science) Science Class 26:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/853839789986231900.pdf"
+      },
+      {
+        "title": "(RESULT) Droga Live Test Result:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166admin_v1/file_manager/pdf/589362485919013000.pdf"
+      },
+      {
+        "title": "batch thumbnail:",
+        "link": "https://d1i3vm6evcjhiu.cloudfront.net/166/admin_v1/bundle_management/course/310968828256_Vardi%20batch.jpg"
+      }
+    ],
+    "Eduteria Maths Class with Amit Sir:": [
+      {
+        "title": "(Maths & Reasoning) Compound Interest Simplified",
+        "link": "https://youtu.be/ODfGcCDAkhg"
+      }
+    ],
+    "A Complete Guide with Upasana Ma'am || Edu Teria Classes:": [
+      {
+        "title": "(Polity) Day 01 - Indian Polity for Competitive Exams",
+        "link": "https://youtu.be/Fe5CXIwsHX0"
+      }
+    ],
+    "India: An Introduction By Gyan Sir || EDU TERIA\":": [
+      {
+        "title": "(Geography) \"Geography for Bihar Daroga 2025",
+        "link": "https://youtu.be/_TR28WHHOQo"
+      }
+    ],
+    "Learn with Neetu Ma'am || Edu Teria Classes:": [
+      {
+        "title": "(Science) Introduction to Science",
+        "link": "https://youtu.be/DtD7BiYICDk"
+      }
+    ]
+  },
+  "Current affairs) Stay Updated with January 2025 Current Affairs": {
+    "General": [
+      {
+        "title": "One-Liner GK + Static Knowledge | Eduteria Live !:",
+        "link": "https://youtu.be/GUdFSMaWeb0"
+      }
+    ]
+  },
+  "Current affairs) Weekly Current Affairs 2025": {
+    "General": [
+      {
+        "title": "Daily Current Affairs | One liner + MCQ revision by Ravi Verma Sir:",
+        "link": "https://youtu.be/nb5vqVlmLkY"
+      },
+      {
+        "title": "Daily Current Affairs | One liner + MCQ revision by Ravi Verma Sir:",
+        "link": "https://youtu.be/zNEDUOLWJ5Q"
+      }
+    ]
+  },
+  "Current affairs) Class 05 - Weekly Current Affairs 2025": {
+    "General": [
+      {
+        "title": "Daily Current Affairs | One-Liner + MCQ Revision | By Ravi Verma Sir:",
+        "link": "https://youtu.be/ehBY6Y5vig4"
+      }
+    ]
+  },
+  "Current affairs) Class 06 - Weekly Current Affairs 2025": {
+    "General": [
+      {
+        "title": "Daily Current Affairs | One-Liner + MCQ Revision | By Ravi Verma Sir:",
+        "link": "https://youtu.be/NBJhI8pKHQM"
+      }
+    ]
+  },
+  "Current affairs) Class 07 - Weekly Current Affairs 2025": {
+    "General": [
+      {
+        "title": "Daily Current Affairs | One-Liner + MCQ Revision | By Ravi Verma Sir:",
+        "link": "https://youtu.be/g1kGHSMAV7M"
+      }
+    ]
+  },
+  "Current affairs) Class 8 - Weekly Current Affairs 2025": {
+    "General": [
+      {
+        "title": "Daily Current Affairs | One-Liner + MCQ Revision | By Ravi Verma Sir:",
+        "link": "https://youtu.be/eOy1tCebkBg"
+      }
+    ]
+  },
+  "Current affairs) Class 09 - Weekly Current Affairs 2025": {
+    "General": [
+      {
+        "title": "Daily Current Affairs | One-Liner + MCQ Revision | By Ravi Verma Sir:",
+        "link": "https://youtu.be/jFmyqvQkiB4"
+      }
+    ]
+  },
+  "Current affairs) Class 10 - Current Affairs Weekly (1-7 April 2025": {
+    "General": [
+      {
+        "title": "For All Exams | By Ravi sir Edu teria Classes Live @ 9 AM:",
+        "link": "https://youtu.be/Dbu_jnYOzvs"
+      }
+    ]
+  },
+  "Current affairs) Class 11 - AWARDS & HONOURS 2025": {
+    "General": [
+      {
+        "title": "Most Expected Questions for PCS/UPSC/SSC | By Ravi Verma Sir:",
+        "link": "https://youtu.be/QbhFr1lihXE"
+      }
+    ]
+  },
+  "Maths & Reasoning) \"Master Compound Interest with Amit Sir": {
+    "General": [
+      {
+        "title": "Bihar Daroga 2025 Prep\":",
+        "link": "https://youtu.be/NogVL16NOwU"
+      }
+    ]
+  },
+  "Maths & Reasoning) Bihar Daroga (SI) 2025": {
+    "General": [
+      {
+        "title": "Free Daily Maths Class | Edu Teria Class:",
+        "link": "https://youtu.be/gKv51U3vSQ0"
+      }
+    ]
+  },
+  "Maths & Reasoning) Bihar Daroga 2025: Free Vardi Batch by Amit Sir": {
+    "General": [
+      {
+        "title": "Daily 9 AM Math Class:",
+        "link": "https://youtu.be/HH2xtkLDAO0"
+      }
+    ]
+  },
+  "Maths & Reasoning) Bihar Daroga 2025: FREE Vardi Batch for Maths & Percentage": {
+    "General": [
+      {
+        "title": "Eduteria Classes:",
+        "link": "https://youtu.be/_4DMJxijYx8"
+      }
+    ]
+  },
+  "Maths & Reasoning) Bihar Daroga 2025": {
+    "General": [
+      {
+        "title": "FREE VARDI Batch | Maths Percentage Part-3 | BY Amit Verma Sir!:",
+        "link": "https://youtu.be/KBYiTRr5cSk"
+      },
+      {
+        "title": "FREE VARDI Batch| Maths Profit and Loss | BY Amit Varma Sir!:",
+        "link": "https://youtu.be/duPzdiHBEdE"
+      },
+      {
+        "title": "FREE VARDI Batch  | Maths Profit and Loss - 03 | BY Amit Varma Sir!:",
+        "link": "https://youtu.be/iTGRifmbhFI"
+      },
+      {
+        "title": "FREE VARDI Batch | Maths Discount 01 | BY Amit Varma Sir!:",
+        "link": "https://youtu.be/uyE07YHvx3g"
+      },
+      {
+        "title": "FREE VARDI Batch | Ratio | Maths Class 12 | BY Amit Varma Sir!:",
+        "link": "https://youtu.be/us4c5_lMi8U"
+      },
+      {
+        "title": "FREE VARDI Batch | Ratio Part -02 | Maths Class 13 | BY Amit Varma Sir!:",
+        "link": "https://youtu.be/a-HZi7XQw7o"
+      },
+      {
+        "title": "FREE VARDI Batch| Ages & Partnership | Maths Class 14 | BY Amit Varma Sir:",
+        "link": "https://youtu.be/D2vpiW-2gv8"
+      },
+      {
+        "title": "FREE VARDI Batch | Ages & Partnership-2 | Maths Class 15 | BY Amit Varma Sir:",
+        "link": "https://youtu.be/LFozKA8zOYk"
+      },
+      {
+        "title": "Complete Maths: Time & Work, Work & Wages, Pipe & Cistern | By Amit Varma Sir:",
+        "link": "https://youtu.be/crp47LJpQAM"
+      }
+    ]
+  },
+  "Maths & Reasoning) BIHAR DAROGA 2025": {
+    "General": [
+      {
+        "title": "FREE VARDI BATCH | MATHS SIMPLE INTEREST PART-1 | BY AMIT VERMA SIR!:",
+        "link": "https://youtu.be/2LMg86aSVxk"
+      }
+    ]
+  },
+  "Maths & Reasoning) Class 17 - Bihar Daroga 2025": {
+    "General": [
+      {
+        "title": "Complete Maths: Time & Distance, Train, Boat & stream | By Amit Varma Sir:",
+        "link": "https://youtu.be/_yXFeiGGrq8"
+      }
+    ]
+  },
+  "Maths & Reasoning) Class 18 - Bihar Daroga Maths Class 2025": {
+    "General": [
+      {
+        "title": "Time & Distance, Train, Boat & stream |Maths Study By Amit Varma Sir:",
+        "link": "https://youtu.be/retrWKnDqiY"
+      }
+    ]
+  },
+  "Maths & Reasoning) Class 19 - Bihar Daroga Maths Class 2025": {
+    "General": [
+      {
+        "title": "Train, Boat & Stream | Complete Maths Study | By Amit Varma Sir:",
+        "link": "https://youtu.be/IypEizvaP-M"
+      }
+    ]
+  },
+  "Maths & Reasoning) Class 20 - Bihar Daroga Maths Class 2025": {
+    "General": [
+      {
+        "title": "Average | Maths Complete Study & Tricks | By Amit Varma Sir ?:",
+        "link": "https://youtu.be/iIw7Y9BJQfY"
+      }
+    ]
+  },
+  "Maths & Reasoning) Class 21 - Bihar Daroga Maths Class 2025": {
+    "General": [
+      {
+        "title": "Average 02 | Maths Complete Study & Tricks | By Amit Varma Sir ?:",
+        "link": "https://youtu.be/JeT0PO8Ai6I"
+      }
+    ]
+  },
+  "Maths & Reasoning) Class 22 - Bihar Daroga Maths Class 2025": {
+    "General": [
+      {
+        "title": "Average 03 | Maths Complete Study & Tricks | By Amit Varma Sir ?:",
+        "link": "https://youtu.be/Hni28zcGbzs"
+      }
+    ]
+  },
+  "Maths & Reasoning) Class 23 - Bihar Daroga Maths Class 2025": {
+    "General": [
+      {
+        "title": "100 Most Important Questions -1 | Complete Maths | By Amit Varma Sir:",
+        "link": "https://youtu.be/kJWyj_4R06A"
+      }
+    ]
+  },
+  "Maths & Reasoning) Class 24 - Bihar Daroga Maths Class 2025": {
+    "General": [
+      {
+        "title": "100 Most Important Questions -1 | Complete Maths | By Amit Varma Sir:",
+        "link": "https://youtu.be/kJWyj_4R06A"
+      }
+    ]
+  },
+  "Polity) Day 02 - Indian Constitution Explained": {
+    "General": [
+      {
+        "title": "Polity for Bihar Daroga 2025 by Upasana Ma'am\":",
+        "link": "https://youtu.be/Vm1iOdg-8as"
+      }
+    ]
+  },
+  "Polity) Day 03 - Bihar Daroga 2025 Vardi Batch: Live Polity Classes by Upasana Ma’am": {
+    "General": [
+      {
+        "title": "Edu Teria Classes:",
+        "link": "https://youtu.be/30djXyINSB8"
+      }
+    ]
+  },
+  "Polity) Day 04 - Bihar Daroga 2025: Free Polity Class by Upasana Ma'am": {
+    "General": [
+      {
+        "title": "Eduteria Classes:",
+        "link": "https://youtu.be/tPzd8zWGwJI"
+      }
+    ]
+  },
+  "Polity) Day 06 - Bihar Daroga 2025": {
+    "General": [
+      {
+        "title": "FREE VARDI Batch  | Polity | सभी अनुसूचियां एक बार में याद करें! | Upasana Mam ?:",
+        "link": "https://youtu.be/09ETTtxFuCk"
+      }
+    ]
+  },
+  "Polity) Day 07 - BIHAR DAROGA 2025": {
+    "General": [
+      {
+        "title": "FREE VARDI BATCH  | POLITY | संविधान के भाग एक बार में याद करें! | UPASANA MAM ?:",
+        "link": "https://youtu.be/miuZZuCNhUI"
+      }
+    ]
+  },
+  "Polity) Day 08 - BIHAR DAROGA 2025": {
+    "General": [
+      {
+        "title": "FREE VARDI BATCH  | POLITY | प्रस्तावना एक बार में याद करें! | UPASANA MAM ?:",
+        "link": "https://youtu.be/S4vXdDSIUdk"
+      }
+    ]
+  },
+  "Polity) Day 09 - BIHAR DAROGA 2025": {
+    "General": [
+      {
+        "title": "FREE VARDI BATCH  | POLITY | THE UNION AND ITS TERRITORY | UPASANA MAM ?:",
+        "link": "https://youtu.be/FpLQtK5HSBk"
+      }
+    ]
+  },
+  "Polity) Day 15 - BIHAR DAROGA 2025": {
+    "General": [
+      {
+        "title": "FREE VARDI BATCH  | POLITY | Citizenship | UPASANA MAM:",
+        "link": "https://youtu.be/urRm358cE0o"
+      }
+    ]
+  },
+  "Polity) BIHAR DAROGA 2025": {
+    "General": [
+      {
+        "title": "FREE VARDI BATCH  | POLITY | Fundamental Rights | UPASANA MAM:",
+        "link": "https://youtu.be/CIE1ZkTKDCo"
+      },
+      {
+        "title": "FREE VARDI BATCH  | POLITY | Fundamental Rights Part 02 | UPASANA MAM:",
+        "link": "https://youtu.be/80XjLBZJZjI"
+      },
+      {
+        "title": "FREE VARDI BATCH  | POLITY | Fundamental Rights Part 03 | UPASANA MAM:",
+        "link": "https://youtu.be/E9Z5dlcoUjw"
+      },
+      {
+        "title": "FREE VARDI BATCH  | POLITY | Fundamental Rights Part 04 | UPASANA MAM:",
+        "link": "https://youtu.be/GqLg78YBu9Q"
+      },
+      {
+        "title": "FREE VARDI BATCH  | POLITY | DPSC | UPASANA MAM:",
+        "link": "https://youtu.be/tJGFT4AQBio"
+      },
+      {
+        "title": "FREE VARDI BATCH  | POLITY | DPSC Part-02 | UPASANA MAM:",
+        "link": "https://youtu.be/lNUQJ7IwpDo"
+      }
+    ]
+  },
+  "Polity) Class 22 - Bihar Daroga Polity Class 2025": {
+    "General": [
+      {
+        "title": "Fundamental Duties | Complete Polity Study | By Upasna Ma'am:",
+        "link": "https://youtu.be/RtMAL1oirOA"
+      }
+    ]
+  },
+  "Polity) Class 23 - Bihar Daroga Polity Class 2025": {
+    "General": [
+      {
+        "title": "Emergency | Complete Study + PYQs | IN ONE SHOT| By Upasna Ma’am:",
+        "link": "https://youtu.be/Iplww7gt7pU"
+      }
+    ]
+  },
+  "Polity) Class 24 - Bihar Daroga Polity Class 2025": {
+    "General": [
+      {
+        "title": "PRESIDENT | Complete Polity Study | By Upasna Ma’am ?:",
+        "link": "https://youtu.be/5ShSbUNg5fc"
+      }
+    ]
+  },
+  "Polity) Class 25 - Bihar Daroga Polity Class 2025": {
+    "General": [
+      {
+        "title": "PRESIDENT 02 | Complete Polity Study | By Upasna Ma’am ?:",
+        "link": "https://youtu.be/mXcVMOcO_qM"
+      }
+    ]
+  },
+  "Polity) Class 26 - Bihar Daroga Polity Class 2025": {
+    "General": [
+      {
+        "title": "Power of President | Complete Polity Study | By Upasna Ma’am ?:",
+        "link": "https://youtu.be/YEtGKjRyjkQ"
+      }
+    ]
+  },
+  "Polity) Class 27 - Bihar Daroga Polity Class 2025": {
+    "General": [
+      {
+        "title": "Vice President | Complete Polity Study | By Upasna Ma’am:",
+        "link": "https://youtu.be/VIeWCbAdM2g"
+      }
+    ]
+  },
+  "Polity) Class 28 - Bihar Daroga Polity Class 2025": {
+    "General": [
+      {
+        "title": "Prime Minister | Complete Polity Study | By Upasna Ma’am:",
+        "link": "https://youtu.be/cKEBGiD0Gpw"
+      }
+    ]
+  },
+  "Polity) Class 29 - Bihar Daroga Polity Class 2025": {
+    "General": [
+      {
+        "title": "Governor & Chief Minister | Complete Polity Study | By Upasna Ma’am:",
+        "link": "https://youtu.be/jVh9mqdDF-M"
+      }
+    ]
+  },
+  "Polity) Class 30 - Bihar Daroga Polity Class 2025": {
+    "General": [
+      {
+        "title": "Governor & Chief Minister | Complete Polity Study | By Upasna Ma’am:",
+        "link": "https://youtu.be/Lh0n1G1rnPg"
+      }
+    ]
+  },
+  "Polity) Class 31 - Bihar Daroga Polity Class 2025": {
+    "General": [
+      {
+        "title": "POLITY Marathon | Complete Study + PYQs | By Upasna Ma’am:",
+        "link": "https://youtu.be/IVrU-CRWXVs"
+      }
+    ]
+  },
+  "Polity) Class 32 - Bihar Daroga Polity Class 2025": {
+    "General": [
+      {
+        "title": "Parliament | Complete Polity Study | By Upasna Ma’am:",
+        "link": "https://youtu.be/Am_t-NnLetY"
+      }
+    ]
+  },
+  "Polity) Class 33 - Bihar Daroga Polity Class 2025": {
+    "General": [
+      {
+        "title": "Parliament 02 | Complete Polity Study | By Upasna Ma’am:",
+        "link": "https://youtu.be/_C4b9TEYnfI"
+      }
+    ]
+  },
+  "Polity) Class 34 - Bihar Daroga Polity Class 2025": {
+    "General": [
+      {
+        "title": "Parliament 03 | Complete Polity Study | By Upasna Ma’am:",
+        "link": "https://youtu.be/xDQqIrasqHs"
+      }
+    ]
+  },
+  "Polity) Class 35 - Bihar Daroga Polity Class 2025": {
+    "General": [
+      {
+        "title": "Bills & Parliamentary Committees | Complete Study | By Upasna Ma’am:",
+        "link": "https://youtu.be/WnMvMLzurGo"
+      }
+    ]
+  },
+  "Polity) Class 36 - Bihar Daroga Polity Class 2025": {
+    "General": [
+      {
+        "title": "Bills Explained | Complete Polity Study | By Upasna Ma'am:",
+        "link": "https://youtu.be/3Fk_MLL7kvE"
+      }
+    ]
+  },
+  "Polity) Class 37 - Bihar Daroga Polity Class 2025": {
+    "General": [
+      {
+        "title": "PANCHAYATI RAJ SYSTEM | Complete Polity Study | By Upasna Ma'am:",
+        "link": "https://youtu.be/ONHtmYijMkk"
+      }
+    ]
+  },
+  "Polity) Class 38 - Bihar Daroga Polity Class 2025": {
+    "General": [
+      {
+        "title": "CONSTITUTIONAL BODIES | Complete Polity Study | By Upasna Ma’am:",
+        "link": "https://youtu.be/PfXfeGjeP4w"
+      }
+    ]
+  },
+  "Polity) Class 39 - Bihar Daroga Polity Class 2025": {
+    "General": [
+      {
+        "title": "CONSTITUTIONAL BODIES | Complete Polity Study | By Upasna Ma’am:",
+        "link": "https://youtu.be/0SYqzNN4wfQ"
+      }
+    ]
+  },
+  "Polity) Class 40 - Bihar Daroga Polity Class 2025": {
+    "General": [
+      {
+        "title": "Judiciary & CAG | Complete Polity Study | By Upasna Ma’am:",
+        "link": "https://youtu.be/aCVYVX7uu9I"
+      }
+    ]
+  },
+  "Polity) Class 43 - राजव्यवस्था Final Revision": {
+    "General": [
+      {
+        "title": "Bihar SI 2025 | All Important MCQs by Upasana Ma'am Edu teria Classes:",
+        "link": "https://youtu.be/pDGCZMAocvI"
+      }
+    ]
+  },
+  "Geography) \"Geological Structure of India": {
+    "General": [
+      {
+        "title": "Bihar Daroga 2025 Geography by Gyan Sir\":",
+        "link": "https://youtu.be/xM6KIDVP1iU"
+      }
+    ]
+  },
+  "Geography) Bihar Daroga 2025 Vardi Batch": {
+    "General": [
+      {
+        "title": "Geomorphic Regions of India By Gyan Sir | Edu Teria Classes:",
+        "link": "https://youtu.be/nLy-DNnf8wI"
+      }
+    ]
+  },
+  "Geography) Bihar Daroga 2025: Free Geography Class by Gyan Sir": {
+    "General": [
+      {
+        "title": "Eduteria Classes:",
+        "link": "https://youtu.be/fF2AaXzWyAM"
+      }
+    ]
+  },
+  "Geography) Bihar Daroga 2025": {
+    "General": [
+      {
+        "title": "FREE VARDI Batch ? | Geography | भू -आकृति प्रदेश  ? | By Gyan Sir ?:",
+        "link": "https://youtu.be/u2GcwNG1its"
+      },
+      {
+        "title": "FREE VARDI Batch ? | Geography | भारत और जलवायु ? | By Gyan Sir ?:",
+        "link": "https://youtu.be/Jdwfn3ew6HA"
+      },
+      {
+        "title": "FREE VARDI Batch | Geography | Soil | By Gyan Sir:",
+        "link": "https://youtu.be/NhD309bao1c"
+      },
+      {
+        "title": "FREE VARDI Batch  | Geography | Natural Vegetation | By Gyan Sir:",
+        "link": "https://youtu.be/o3fNJy28oI8"
+      },
+      {
+        "title": "FREE VARDI Batch | Geography | Agriculture and Production | By Gyan Sir:",
+        "link": "https://youtu.be/99Pdm33osxY"
+      },
+      {
+        "title": "FREE VARDI Batch | Geography | India : Minerals and Industry | By Gyan Sir:",
+        "link": "https://youtu.be/6lCWLjiWZ2c"
+      },
+      {
+        "title": "FREE VARDI Batch | Geography | India : Minerals and Industry | By Gyan Sir:",
+        "link": "https://youtu.be/Lz5wdwwMqPE"
+      },
+      {
+        "title": "FREE VARDI Batch | Geography | India : Energy | By Gyan Sir:",
+        "link": "https://youtu.be/yF9gpO0oHqY"
+      },
+      {
+        "title": "FREE VARDI Batch | Geography | India : Transport | By Gyan Sir:",
+        "link": "https://youtu.be/2VLZAm6ZDz8"
+      },
+      {
+        "title": "भारत के भौतिक भूगोल के टॉप 40 प्रश्न | Physical India MCQs:",
+        "link": "https://youtu.be/KxuFrgfQ1s0"
+      }
+    ]
+  },
+  "Geography) Bihar Daroga 2025 Geography: India - Water by Gyan Sir": {
+    "General": [
+      {
+        "title": "Vardee Batch Day 07:",
+        "link": "https://youtu.be/09RLIKM1E8w"
+      }
+    ]
+  },
+  "Geography) BIHAR DAROGA 2025": {
+    "General": [
+      {
+        "title": "अपवाह तंत्र (Drainage System) एक ही बार में समझो!  | One Shot By GYAN SIR:",
+        "link": "https://youtu.be/2EFfKSdlVQA"
+      }
+    ]
+  },
+  "Geography) Class 17 - Bihar Daroga 2025": {
+    "General": [
+      {
+        "title": "FREE VARDI Batch | Geography: Population & Urbanization | By Gyan Sir:",
+        "link": "https://youtu.be/GDvoTap0HZs"
+      }
+    ]
+  },
+  "Geography) Class 18 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "India: Species & Tribes | Complete Geography Study | By Gyan Sir:",
+        "link": "https://youtu.be/j1Er2ONt70s"
+      }
+    ]
+  },
+  "Geography) Class 19 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "MISCELLANEOUS | Complete Geography Study | By Gyan Sir:",
+        "link": "https://youtu.be/oFxrNz5mf7Y"
+      }
+    ]
+  },
+  "Geography) Class 20 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "MISCELLANEOUS 02 | Complete Geography Study | By Gyan Sir ?:",
+        "link": "https://youtu.be/wwIgETjV8E8"
+      }
+    ]
+  },
+  "Geography) Class 21 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "MISCELLANEOUS- QUESTIONNAIRE 02 | Geography Study | By Gyan Sir?:",
+        "link": "https://youtu.be/tx3yVMel82Q"
+      }
+    ]
+  },
+  "Geography) Class 22 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "MISCELLANEOUS- QUESTIONNAIRE 03 | Geography Study | By Gyan Sir?:",
+        "link": "https://youtu.be/20iHq0ElCoQ"
+      }
+    ]
+  },
+  "Geography) Class 23 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "MISCELLANEOUS- QUESTIONNAIRE 04 | Geography Study | By Gyan Sir?:",
+        "link": "https://youtu.be/K5AHUYakESQ"
+      }
+    ]
+  },
+  "Geography) Class 24 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "Universe & Solar System | Complete Geography Study | By Gyan Sir:",
+        "link": "https://youtu.be/6Ji6FGygTf4"
+      }
+    ]
+  },
+  "Geography) Class 25 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "Origin & Evolution of the Universe | Solar System 02 By Gyan Sir:",
+        "link": "https://youtu.be/1jDc3f8glxk"
+      }
+    ]
+  },
+  "Geography) Class 26 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "Earth: Origin, Evolution & Internal Structure | By Gyan Sir:",
+        "link": "https://youtu.be/O0wDVg33jww"
+      }
+    ]
+  },
+  "Geography) Class 27 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "Earth: Movements & Location | Complete Geography | By Gyan Sir:",
+        "link": "https://youtu.be/lNCD0l4FYRw"
+      }
+    ]
+  },
+  "Geography) Class 28 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "Earthquakes, Volcanoes & Tsunamis | Geography Class  By Gyan Sir:",
+        "link": "https://youtu.be/O_F9AW4Rabc"
+      }
+    ]
+  },
+  "Geography) Class 29 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "World: Soil | Complete Geography Study | By Gyan Sir:",
+        "link": "https://youtu.be/9LBcPb5R7qc"
+      }
+    ]
+  },
+  "Geography) Class 30 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "Drainage System | Complete Geography in One Shot | By Gyan Sir:",
+        "link": "https://youtu.be/ebL6czZDDgg"
+      }
+    ]
+  },
+  "Geography) Class 31 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "Minerals & Industry | Complete Geography Study | By Gyan Sir:",
+        "link": "https://youtu.be/HviqjTTx56w"
+      }
+    ]
+  },
+  "Geography) Class 32 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "ATMOSPHERE | Complete Geography Study | By Gyan Sir:",
+        "link": "https://youtu.be/ki7jYCtFvA0"
+      }
+    ]
+  },
+  "Geography) Class 33 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "WIND, CYCLONES & ANTICYCLONES | Geography Study | By Gyan Sir ?:",
+        "link": "https://youtu.be/dFTDK4SR6Nw"
+      }
+    ]
+  },
+  "Geography) Class 34 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "Earth: Water Distribution | Geography Study | By Gyan Sir:",
+        "link": "https://youtu.be/sFLOjObw0JQ"
+      }
+    ]
+  },
+  "Geography) Class 35 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "Earth: Water Distribution | Geography Study | By Gyan Sir:",
+        "link": "https://youtu.be/MOT9mvbqN9M"
+      }
+    ]
+  },
+  "Geography) Class 36 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "World: Miscellaneous Facts | Complete Geography | By Gyan Sir:",
+        "link": "https://youtu.be/Bxp0Ltu0cRw"
+      }
+    ]
+  },
+  "Geography) Class 37 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "World: Miscellaneous Facts 02 | Complete Geography | By Gyan Sir:",
+        "link": "https://youtu.be/7NPDDWyKggc"
+      }
+    ]
+  },
+  "Geography) Class 38 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "World: Miscellaneous Facts 03 | Complete Geography | By Gyan Sir:",
+        "link": "https://youtu.be/HVYervUtyOg"
+      }
+    ]
+  },
+  "Geography) Class 39 - Bihar Daroga Geography Class 2025": {
+    "General": [
+      {
+        "title": "All PYQ World Geography in One Class | Geography By Gyan Sir:",
+        "link": "https://youtu.be/xsZdodxGNHA"
+      }
+    ]
+  },
+  "History) \"Bihar Daroga 2025 History": {
+    "General": [
+      {
+        "title": "Harappa Sabhyata Part 1 by Ritesh Sir\":",
+        "link": "https://youtu.be/aV-2WcRMvNg"
+      }
+    ]
+  },
+  "History) Bihar Daroga 2025: Harappa Sabhyata Part 2": {
+    "General": [
+      {
+        "title": "Free History Classes by Ritesh Sir | Edu Teria Classes:",
+        "link": "https://youtu.be/8pM8oe45swk"
+      }
+    ]
+  },
+  "History) Bihar Daroga 2025: Free History Class by Ritesh Sir": {
+    "General": [
+      {
+        "title": "Eduteria Classes:",
+        "link": "https://youtu.be/c3VL8P1FYnE"
+      }
+    ]
+  },
+  "History) Bihar Daroga 2025": {
+    "General": [
+      {
+        "title": "FREE VARDI Batch ? | History | महाजनपद: पूरा टॉपिक एक बार में! | By Ritesh Sir ?:",
+        "link": "https://youtu.be/RbFuuOdu_x0"
+      },
+      {
+        "title": "FREE VARDI Batch | History | बौद्ध धर्म : पूरा टॉपिक एक बार में | By Ritesh Sir:",
+        "link": "https://youtu.be/di6h7zhL9lQ"
+      },
+      {
+        "title": "FREE VARDI Batch | History | जैन धर्म : पूरा टॉपिक एक बार में | By Ritesh Sir:",
+        "link": "https://youtu.be/E0A_aa6BuAg"
+      },
+      {
+        "title": "FREE VARDI Batch | History | Buddhism and Jainism MCQ's | By Ritesh Sir:",
+        "link": "https://youtu.be/3Nq8mm-yBUk"
+      },
+      {
+        "title": "FREE VARDI Batch | History | Iranian and Greek Invasion | By Ritesh Sir:",
+        "link": "https://youtu.be/nRQCA4PpnBw"
+      },
+      {
+        "title": "FREE VARDI Batch | History | Maurya Dynasty | By Ritesh Sir:",
+        "link": "https://youtu.be/lCifc5e2Aow"
+      },
+      {
+        "title": "FREE VARDI Batch | History | Maurya Dynasty -02 | By Ritesh Sir:",
+        "link": "https://youtu.be/E9gaaBfzIcs"
+      },
+      {
+        "title": "FREE VARDI Batch | History | Later Maurya Period | By Ritesh Sir:",
+        "link": "https://youtu.be/YvJjlKk-nsI"
+      },
+      {
+        "title": "FREE VARDI Batch| History | Later Maurya Period Part 2 | By Ritesh Sir:",
+        "link": "https://youtu.be/0IpzbiZZJEs"
+      },
+      {
+        "title": "FREE VARDI Batch | History | RAJPUTAS 01 | By Ritesh Sir:",
+        "link": "https://youtu.be/zFJouUQfMO0"
+      },
+      {
+        "title": "FREE VARDI Batch| History | Pre Medieval South India | By Ritesh Sir:",
+        "link": "https://youtu.be/PHNeBmwo4L8"
+      },
+      {
+        "title": "History | Gupta Age, Harsh Vardhan and Sangam Period | By Ritesh Sir:",
+        "link": "https://youtu.be/yzFCsh7KXmc"
+      },
+      {
+        "title": "FREE VARDI Batch| History | miscellaneous MCQs  | By Ritesh Sir:",
+        "link": "https://youtu.be/b5ryBqsgwrM"
+      }
+    ]
+  },
+  "History) Class 20 - Bihar Daroga 2025": {
+    "General": [
+      {
+        "title": "FREE VARDI Batch| History | Arab Invasion | By Ritesh Sir:",
+        "link": "https://youtu.be/9eJnNXDvjUQ"
+      }
+    ]
+  },
+  "History) Class 21 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "Slave Dynasty | Complete History Study | By Ritesh Sir:",
+        "link": "https://youtu.be/89mmdFykSpw"
+      }
+    ]
+  },
+  "History) Class 22 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "Slave Dynasty 02 | Complete History Study | By Ritesh Sir:",
+        "link": "https://youtu.be/JWpo9jdJ6xM"
+      }
+    ]
+  },
+  "History) Class 23 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "Khilji Dynasty | Complete History Study | By Ritesh Sir:",
+        "link": "https://youtu.be/QkV9i7-Jskw"
+      }
+    ]
+  },
+  "History) Class 24 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "Khilji Dynasty 02 | Complete History Study | By Ritesh Sir:",
+        "link": "https://youtu.be/UQy-cv4yVKw"
+      }
+    ]
+  },
+  "History) Class 25 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "Tugalak Dynasty 02 | Complete History Study | By Ritesh Sir:",
+        "link": "https://youtu.be/sGEYu7QjY_c"
+      }
+    ]
+  },
+  "History) Class 26 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "SAYYID AND LODI DYNASTIES | Complete History Study | By Ritesh Sir:",
+        "link": "https://youtu.be/D4OpZ4HSmmA"
+      }
+    ]
+  },
+  "History) Class 27 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "MUGHAL DYNASTY | Complete Study | IN ONE SHOT ?| By Ritesh Sir:",
+        "link": "https://youtu.be/D5TPq8F4894"
+      }
+    ]
+  },
+  "History) Class 28 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "MUGHAL DYNASTY 02 | Complete Study | IN ONE SHOT ?| By Ritesh Sir:",
+        "link": "https://youtu.be/WHw0aFtWJQ4"
+      }
+    ]
+  },
+  "History) Class 29 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "Sher Shah (Sur Dynasty) | Complete History Study | By Ritesh Sir ?:",
+        "link": "https://youtu.be/JuCG1hQ5Qzk"
+      }
+    ]
+  },
+  "History) Class 30 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "Vijayanagar Empire | Complete History Study | By Ritesh Sir:",
+        "link": "https://youtu.be/WiZF_y7auLA"
+      }
+    ]
+  },
+  "History) Class 31 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "Sikhism | Complete History Study | By Ritesh Sir:",
+        "link": "https://youtu.be/8ublZSf2Y2w"
+      }
+    ]
+  },
+  "History) Class 32 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "Maratha Empire | Complete History Study | By Ritesh Sir:",
+        "link": "https://youtu.be/fWLWWMet5q8"
+      }
+    ]
+  },
+  "History) Class 33 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "Bhakti & Sufi Movement | Complete Study in One Shot  By Ritesh Sir:",
+        "link": "https://youtu.be/2sLGQS4JFxo"
+      }
+    ]
+  },
+  "History) Class 34 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "Advent of Europeans | Complete History Study | By Ritesh Sir:",
+        "link": "https://youtu.be/mWMRUzuJS98"
+      }
+    ]
+  },
+  "History) Class 35 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "Advent of Europeans-2 | Complete History Study | By Ritesh Sir:",
+        "link": "https://youtu.be/ekuEKUkOD0E"
+      }
+    ]
+  },
+  "History) Class 36 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "Socio-Religious Reform Movements | in One Shot | By Ritesh Sir:",
+        "link": "https://youtu.be/6y22e2Lms-E"
+      }
+    ]
+  },
+  "History) Class 37 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "अंग्रेजों का भारत विजय | Complete History Study | By Ritesh Sir:",
+        "link": "https://youtu.be/FN1oqX4mIQQ"
+      }
+    ]
+  },
+  "History) Class 38 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "British Conquest of India 02 Complete History Study  By Ritesh Sir:",
+        "link": "https://youtu.be/AWhDQ8cwK6M"
+      }
+    ]
+  },
+  "History) Class 39 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "SOCIAL AND CULTURAL POLICY OF THE BRITISH | History By Ritesh Sir:",
+        "link": "https://youtu.be/a4aCz_AkRJs"
+      }
+    ]
+  },
+  "History) Class 40 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "REVOLT OF 1857 | Complete History Study | By Ritesh Sir:",
+        "link": "https://youtu.be/GfpMUnfZ3oM"
+      }
+    ]
+  },
+  "History) Class 41 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "REVOLUTIONARY MOVEMENT | Complete History Study | By Ritesh Sir ?:",
+        "link": "https://youtu.be/UrTazr9G7DQ"
+      }
+    ]
+  },
+  "History) Class 42 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "Civilian, Tribal & Peasant Movements | History  By Ritesh Sir:",
+        "link": "https://youtu.be/iuZFSfbYkHU"
+      }
+    ]
+  },
+  "History) Class 43 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "Indian National Movement | Complete Study in One Shot By Ritesh Sir:",
+        "link": "https://youtu.be/STZUBlEmYSk"
+      }
+    ]
+  },
+  "History) Class 44 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "Indian National Movement | Complete Study in One Shot By Ritesh Sir:",
+        "link": "https://youtu.be/0nLkB36tFEw"
+      }
+    ]
+  },
+  "History) Class 45 - Bihar Daroga History Class 2025": {
+    "General": [
+      {
+        "title": "Indian National Movement | Complete History Study | By Ritesh Sir:",
+        "link": "https://youtu.be/Nj2iI7bJ6PI"
+      }
+    ]
+  },
+  "History) Class 46 - BIHAR DAROGA 2025 - इतिहास स्पेशल": {
+    "General": [
+      {
+        "title": "सिंधु घाटी सभ्यता - टॉप 50 सबसे अपेक्षित प्रश्न:",
+        "link": "https://youtu.be/iAWMJxhaDII"
+      }
+    ]
+  },
+  "History) Class 47 - Bihar Daroga Exam 2025": {
+    "General": [
+      {
+        "title": "Most Expected Questions from Maurya Empire | Edu teria Classes:",
+        "link": "https://youtu.be/jsLa6AuT3SU"
+      }
+    ]
+  },
+  "History) Class 48 - Bihar Daroga 2025 Special": {
+    "General": [
+      {
+        "title": "Delhi Sultanate History MCQ Marathon By Ritesh sir Edu teria Classes:",
+        "link": "https://youtu.be/QbB9BATS-Ys"
+      }
+    ]
+  },
+  "History) Class 49 - Bihar Daroga Target Series": {
+    "General": [
+      {
+        "title": "Most Expected History Questions for All State Exams | By Ritesh Sir:",
+        "link": "https://youtu.be/brLwiaXo4_M"
+      }
+    ]
+  },
+  "History) Class 51 - BIHAR DAROGA History Masterclass": {
+    "General": [
+      {
+        "title": "By Ritesh Sir Edu teria Classes:",
+        "link": "https://youtu.be/k0jmOMgOyv8"
+      }
+    ]
+  },
+  "Science) \"Bihar Daroga 2025 Preparation": {
+    "General": [
+      {
+        "title": "Cell Structure and Science Concepts with Neetu Ma'am\":",
+        "link": "https://youtu.be/UTfsdvhzLvQ"
+      }
+    ]
+  },
+  "Science) Bihar Daroga 2025: Cell Division Explained": {
+    "General": [
+      {
+        "title": "Free Science Classes by Neetu Ma’am | Edu Teria Classes:",
+        "link": "https://youtu.be/taHTgVOcxks"
+      }
+    ]
+  },
+  "Science) Bihar Daroga 2025: Free Science Class by Neetu Ma'am": {
+    "General": [
+      {
+        "title": "Eduteria Classes:",
+        "link": "https://youtu.be/4VS7cC0pnSI"
+      }
+    ]
+  },
+  "Science) Bihar Daroga 2025: Science Tissues Class": {
+    "General": [
+      {
+        "title": "Vardi Batch by Neetu Ma’am:",
+        "link": "https://youtu.be/_NCln-CCfJQ"
+      }
+    ]
+  },
+  "Science) Bihar Daroga 2025": {
+    "General": [
+      {
+        "title": "FREE VARDI Batch  | Science | पोषण (Nutrition) पूरी तरह समझें! | By Neetu Mam:",
+        "link": "https://youtu.be/aMPDQn5Ycp8"
+      },
+      {
+        "title": "FREE VARDI Batch  | Science | पोषक तत्व (NUTRIENTS) | By Neetu Mam:",
+        "link": "https://youtu.be/nKHkmJJMUEc"
+      },
+      {
+        "title": "FREE VARDI Batch  | Science | रक्त संचार तंत्र  | By Neetu Mam:",
+        "link": "https://youtu.be/dmt0jHw8bjc"
+      },
+      {
+        "title": "FREE VARDI Batch  | Science | रक्त | By Neetu Mam:",
+        "link": "https://youtu.be/ET2hAC114fk"
+      },
+      {
+        "title": "FREE VARDI Batch  | Science One Short | Tissue | By Neetu Mam:",
+        "link": "https://youtu.be/2IsJf5in1zg"
+      },
+      {
+        "title": "FREE VARDI Batch  | Science | HUMAN DIGESTIVE SYSTEM | By Neetu Mam:",
+        "link": "https://youtu.be/dSQ6Rpjv-7k"
+      },
+      {
+        "title": "FREE VARDI Batch | Science | Endocrine system | By Neetu Mam:",
+        "link": "https://youtu.be/b5seIqC7-6w"
+      },
+      {
+        "title": "FREE VARDI Batch | Science | Endocrine system 02 | By Neetu Mam:",
+        "link": "https://youtu.be/HfUAzQ_GTEo"
+      }
+    ]
+  },
+  "Science) Class 14 - Bihar Daroga 2025": {
+    "General": [
+      {
+        "title": "FREE VARDI Batch | Science | Reproductive System | By Neetu Mam:",
+        "link": "https://youtu.be/JcEM2GMimUA"
+      }
+    ]
+  },
+  "Science) Class 15 - Bihar Daroga Science Class 2025": {
+    "General": [
+      {
+        "title": "Body Movements | Complete Science Study | By Neetu Ma’am:",
+        "link": "https://youtu.be/txdlhXruNt8"
+      }
+    ]
+  },
+  "Science) Class 16 - Bihar Daroga Science Class 2025": {
+    "General": [
+      {
+        "title": "Respiratory System | Complete Science Study | By Neetu Ma’am ?:",
+        "link": "https://youtu.be/ZS3q4NMTwFg"
+      }
+    ]
+  },
+  "Science) Class 17 - Bihar Daroga Science Class 2025": {
+    "General": [
+      {
+        "title": "Excretory System | Complete Science Study | By Neetu Ma’am ?:",
+        "link": "https://youtu.be/ycswmnh4IgE"
+      }
+    ]
+  },
+  "Science) Class 18 - Bihar Daroga Science Class 2025": {
+    "General": [
+      {
+        "title": "Nervous System | Complete Science Study | By Neetu Ma’am ?:",
+        "link": "https://youtu.be/WWaeMcEwQvc"
+      }
+    ]
+  },
+  "Science) Class 19 - Bihar Daroga Science Class 2025": {
+    "General": [
+      {
+        "title": "Respiratory System | Complete Science Study | By Neetu Ma’am:",
+        "link": "https://youtu.be/1gUCLt0kfmI"
+      }
+    ]
+  },
+  "Science) Class 20 - Bihar Daroga Science Class 2025": {
+    "General": [
+      {
+        "title": "Atomic Structure | Complete Science Study | By Neetu Ma’am:",
+        "link": "https://youtu.be/Qk-tNWT0jdY"
+      }
+    ]
+  },
+  "Science) Class 21 - Bihar Daroga Science Class 2025": {
+    "General": [
+      {
+        "title": "Periodic Table | Complete Science Study | By Neetu Ma’am:",
+        "link": "https://youtu.be/T-WG2dghGw8"
+      }
+    ]
+  },
+  "Science) Class 22 - Bihar Daroga Class 2025": {
+    "General": [
+      {
+        "title": "Science Marathon Class | Hydrocarbon & Carbon Allotropes | By Neetu Ma’am:",
+        "link": "https://youtu.be/KQAI5H3LmB0"
+      }
+    ]
+  },
+  "Science) Class 23 - Bihar Daroga Science Class 2025": {
+    "General": [
+      {
+        "title": "Acid, Base and Salt | Complete Science Study | By Neetu Ma’am:",
+        "link": "https://youtu.be/-LIeDv3UzOc"
+      }
+    ]
+  },
+  "Science) Class 24 - Bihar Daroga Class 2025": {
+    "General": [
+      {
+        "title": "Science Marathon | Metals, Non-Metals, Metallurgy & Gases | By Neetu Ma’am:",
+        "link": "https://youtu.be/dXkFTafsAQw"
+      }
+    ]
+  },
+  "Science) Class 25 - Bihar Daroga Chemistry Marathon Class 2025": {
+    "General": [
+      {
+        "title": "Environmental | Complete Science Study | By Neetu Ma’am:",
+        "link": "https://youtu.be/9HC1CPrk15o"
+      }
+    ]
+  },
+  "Science) Class 26 - BIHAR DAROGA 2025": {
+    "General": [
+      {
+        "title": "Human Anatomy Top 50 Questions | Biology by Neetu Ma'am:",
+        "link": "https://youtu.be/aWDVpwj7eAg"
+      }
+    ]
+  }
+};
 
-    <div id="url-input-container">
-        <input type="text" id="url-input" placeholder="Enter video URL to play...">
-        <button onclick="playCustomUrl()">Play</button>
-    </div>
+    const sidebar = document.getElementById("sidebar");
+    const content = document.getElementById("contentArea");
 
-    <button onclick="toggleUrlInput()" style="margin: 20px auto; padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; display: block; width: 90%; max-width: 600px;">Enter Custom URL</button>
+    for (const subject in data) {
+      const subjectDiv = document.createElement("div");
+      subjectDiv.className = "subject";
+      subjectDiv.textContent = subject;
+      subjectDiv.onclick = () => {
+        content.innerHTML = "";
+        for (const topic in data[subject]) {
+          const topicDiv = document.createElement("div");
+          topicDiv.className = "topic";
+          topicDiv.innerHTML = `<h3>${topic}</h3>`;
 
-    <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search for videos, PDFs, or other resources..." oninput="filterContent()">
-    </div>
+          const pdfLinks = data[subject][topic].filter(i => i.link.includes(".pdf"));
+          const videoLinks = data[subject][topic].filter(i => !i.link.includes(".pdf"));
 
-    <div id="noResults" class="no-results">No results found.</div>
-
-    <div class="container">
-        <div class="tab" onclick="showContent('videos')">Videos</div>
-        <div class="tab" onclick="showContent('pdfs')">PDFs</div>
-        <div class="tab" onclick="showContent('others')">Others</div>
-    </div>
-
-    <div id="videos" class="content">
-        <h2>All Video Lectures</h2>
-        <div class="video-list">
-            <a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/dec-2024/168113/kgss-1734496746-v168113.m3u8')">Lecture-46 - Tropic of Cancer & Time Line - कर्क रेखा और समय रेखा</a><a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/dec-2024/168846/kgss-1734583151-v168846.m3u8')">Lecture-47 - Himalaya - हिमालय</a><a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/dec-2024/170389/kgss-1734929112-v170389.m3u8')">Part-02)</a><a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/dec-2024/170994/kgss-1735015187-v170994.m3u8')">Lecture-50 -  Major rivers of India - भारत की प्रमुख नदियां ( Part-03)</a><a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/dec-2024/171426/kgss-1735101274-v171426.m3u8')">Lecture-51 - Major rivers of India - भारत की प्रमुख नदियां ( Part-04)</a><a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/dec-2024/171872/kgss-1735187755-v171872.m3u8')">Lecture-52 - Indian Soil - भारतीय मिट्टी (Part-01)</a><a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/jan-2025/174952/kgss-1736138257-v174952.m3u8')">Lecture-53 - Indian Soil - भारतीय मिट्टी (Part-02)</a><a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/jan-2025/175833/kgss-1736224581-v175833.m3u8')">Lecture-54 - Indian Transportation Project - भारतीय परिवहन परियोजना (Part-01)</a><a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/jan-2025/176348/kgss-1736311023-v176348.m3u8')">Lecture-55 - Indian Transportation Project - भारतीय परिवहन परियोजना (Part-02)</a><a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/jan-2025/176726/kgss-1736397389-v176726.m3u8')">Lecture-56 - Indian Transportation Project - भारतीय परिवहन परियोजना (Part-03)</a><a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/jan-2025/177322/kgss-1736484705-v177322.m3u8')">Lecture-57 - Indian Transportation & Harbor - भारतीय परिवहन और बंदरगाह</a><a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/jan-2025/177985/kgss-1736742824-v177985.m3u8')">Lecture-58 - Harbor & National Park - बंदरगाह और नैशनल पार्क</a><a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/jan-2025/178689/kgss-1736829299-v178689.m3u8')">Lecture-59 - National Park - नैशनल पार्क</a><a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/jan-2025/178947/kgss-1736916406-v178947.m3u8')">Lecture-60 - India Railway Zones - भारत के रेलवे जोन</a><a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/jan-2025/179416/kgss-1737002493-v179416.m3u8')">Lecture-61 - Indian River Systems - भारतीय नदी प्रणाली  (Part-1)</a><a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/jan-2025/179900/kgss-1737088688-v179900.m3u8')">Lecture-62 - Indian River Systems - भारतीय नदी प्रणाली (Part-2)</a><a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/jan-2025/181860/kgss-1737346942-v181860.m3u8')">Lecture-63 - Indian River Systems - भारतीय नदी प्रणाली (Part-3)</a><a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/jan-2025/182392/kgss-1737434094-v182392.m3u8')">Lecture-64 - Indian River Systems - भारतीय नदी प्रणाली (Part-4)</a><a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/jan-2025/184710/kgss-1737952762-v184710.m3u8')">Lecture-66 - Indian Army Command - भारतीय सेना के कमान</a><a href="#" onclick="playVideo('https://www.khanglobalstudies.com/player?src=https://kgs-v1.akamaized.net/kv3/jan-2025/185376/kgss-1738039202-v185376.m3u8')">Lecture-67 -  Multipurpose Project - बहुउद्देशीय परियोजना</a>
-        </div>
-    </div>
-
-    <div id="pdfs" class="content">
-        <h2>All PDFs</h2>
-        <div class="pdf-list">
-            <a href="https://kgs.nyc3.digitaloceanspaces.com/pdfs/8ce9f206-b94a-44ad-9ae5-b4adb8259c34.pdf" target="_blank">Indian Map 2024.pdf</a><a href="https://kgs.nyc3.digitaloceanspaces.com/pdfs/fda5a79f-f16a-473a-9b18-d0e3c3b4b6e4.pdf" target="_blank">Indian Blank Map 2024.pdf</a><a href="https://kgs.nyc3.digitaloceanspaces.com/pdfs/0cdb06a5-baa3-4f53-805d-cb15fc48ec74.pdf" target="_blank">Indian Map Test (27 Nov)</a><a href="https://kgs.nyc3.digitaloceanspaces.com/pdfs/5c988349-be73-42ad-8dd4-7285050726d0.pdf" target="_blank">Indian Map Test Answer Key</a><a href="https://kgs.nyc3.digitaloceanspaces.com/pdfs/7b6a8c88-10b0-46ca-a752-1e3100ffba1e.pdf" target="_blank">Soil indian map</a><a href="https://kgs.nyc3.digitaloceanspaces.com/pdfs/1a1a1bac-cb5d-4fc4-b82b-0cf6f23f6843.pdf" target="_blank">Indian Geo Test (23 Jan)</a><a href="https://kgs.nyc3.digitaloceanspaces.com/pdfs/93e4772a-0e98-40cb-9709-69e25ccca9bf.pdf" target="_blank">Indian Map Answer key</a>
-        </div>
-    </div>
-
-    <div id="others" class="content">
-        <h2>Other Resources</h2>
-        <div class="other-list">
-            
-        </div>
-    </div>
-
-    <div class="footer"><b>Extracted By : ABHI🥰 (https://t.me/DRISTI_BPSC)⁬</b></div>
-
-    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
-    <script>
-        const player = videojs('engineer-babu-player', {
-            controls: true,
-            autoplay: false,
-            preload: 'auto',
-            fluid: true,
-            controlBar: {
-                children: [
-                    'playToggle',
-                    'volumePanel',
-                    'currentTimeDisplay',
-                    'timeDivider',
-                    'durationDisplay',
-                    'progressControl',
-                    'liveDisplay',
-                    'remainingTimeDisplay',
-                    'customControlSpacer',
-                    'playbackRateMenuButton',
-                    'chaptersButton',
-                    'descriptionsButton',
-                    'subsCapsButton',
-                    'audioTrackButton',
-                    'fullscreenToggle'
-                ]
-            }
-        });
-
-        function playVideo(url) {
-            if (url.includes('.m3u8')) {
-                document.getElementById('video-player').style.display = 'block';
-                player.src({ src: url, type: 'application/x-mpegURL' });
-                player.play().catch(() => {
-                    window.open(url, '_blank');
-                });
-            } else {
-                window.open(url, '_blank');
-            }
-        }
-
-        function toggleUrlInput() {
-            const urlInputContainer = document.getElementById('url-input-container');
-            urlInputContainer.style.display = urlInputContainer.style.display === 'none' ? 'block' : 'none';
-        }
-
-        function playCustomUrl() {
-            const url = document.getElementById('url-input').value;
-            if (url) {
-                playVideo(url);
-            }
-        }
-
-        function showContent(tabName) {
-            const contents = document.querySelectorAll('.content');
-            contents.forEach(content => {
-                content.style.display = 'none';
+          if (pdfLinks.length) {
+            const pdfBlock = document.createElement("div");
+            pdfBlock.innerHTML = "<h4>📄 PDFs</h4>";
+            pdfLinks.forEach(item => {
+              const a = document.createElement("a");
+              a.href = item.link.startsWith("http") ? item.link : "https://" + item.link;
+              a.className = "link";
+              a.target = "_blank";
+              a.textContent = item.title;
+              pdfBlock.appendChild(a);
             });
-            const selectedContent = document.getElementById(tabName);
-            if (selectedContent) {
-                selectedContent.style.display = 'block';
-            }
-            filterContent();
-        }
+            topicDiv.appendChild(pdfBlock);
+          }
 
-        function filterContent() {
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            const categories = ['videos', 'pdfs', 'others'];
-            let hasResults = false;
-
-            categories.forEach(category => {
-                const items = document.querySelectorAll(`#${category} .${category}-list a`);
-                let categoryHasResults = false;
-
-                items.forEach(item => {
-                    const itemText = item.textContent.toLowerCase();
-                    if (itemText.includes(searchTerm)) {
-                        item.style.display = 'block';
-                        categoryHasResults = true;
-                        hasResults = true;
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-
-                const categoryHeading = document.querySelector(`#${category} h2`);
-                if (categoryHeading) {
-                    categoryHeading.style.display = categoryHasResults ? 'block' : 'none';
-                }
+          if (videoLinks.length) {
+            const videoBlock = document.createElement("div");
+            videoBlock.innerHTML = "<h4>🎥 Videos</h4>";
+            videoLinks.forEach(item => {
+              const a = document.createElement("a");
+              a.href = item.link.startsWith("http") ? item.link : "https://" + item.link;
+              a.className = "link";
+              a.target = "_blank";
+              a.textContent = item.title;
+              videoBlock.appendChild(a);
             });
+            topicDiv.appendChild(videoBlock);
+          }
 
-            const noResultsMessage = document.getElementById('noResults');
-            if (noResultsMessage) {
-                noResultsMessage.style.display = hasResults ? 'none' : 'block';
-            }
+          content.appendChild(topicDiv);
         }
+      };
+      sidebar.appendChild(subjectDiv);
+    }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            showContent('videos');
-        });
-    </script>
+    document.getElementById("search").addEventListener("input", () => {
+      const val = document.getElementById("search").value.toLowerCase();
+      document.querySelectorAll(".link").forEach(link => {
+        link.style.display = link.textContent.toLowerCase().includes(val) ? "block" : "none";
+      });
+    });
+  </script>
 </body>
 </html>
-    
